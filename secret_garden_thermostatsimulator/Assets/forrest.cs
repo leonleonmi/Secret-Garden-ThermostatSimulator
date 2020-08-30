@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class forrest : MonoBehaviour
 {
-  public int forestSize = 25;
+  public int forestSize = 5;
   public int elementSpacing = 3;
 
   public Element[] elements;
@@ -20,8 +20,8 @@ public class forrest : MonoBehaviour
               if(element.CanPlace()){
               Vector3 position = new Vector3(x, 0f, z);
               Vector3 offset = new Vector3(Random.Range(-0.75f, 0.75f),0f, Random.Range(-0.75f, 0.75f));
-              Vector3 rotation = new Vector3(Random.Range(0, 5f), Random.Range(0, 360f), Random.Range(0, 5f));
-              Vector3 scale = Vector3.one * Random.Range(0.75f, 1.25f);
+              Vector3 rotation = new Vector3(Random.Range(0, 5f), Random.Range(10, 1f), Random.Range(0, 5f));
+              Vector3 scale = Vector3.one * Random.Range(0.1f, 1f);
 
               GameObject newElement = Instantiate(element.GetRandom());
               newElement.transform.SetParent(transform);
