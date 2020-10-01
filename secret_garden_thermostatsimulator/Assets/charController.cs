@@ -9,6 +9,7 @@ public class charController : MonoBehaviour
     public Rigidbody rb;
 
     public bool onGround = true;
+    public bool shipCollison = true;
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
@@ -36,4 +37,11 @@ public class charController : MonoBehaviour
                onGround = true;
            }
 }
+
+    /*private void OnColissionEnter(Collision collision) {
+           if(collision.gameObject.name == "StarSparrow12") {
+               shipCollison = true;
+               Debug.Log("Ship entered");
+           }
+        }*/
 }

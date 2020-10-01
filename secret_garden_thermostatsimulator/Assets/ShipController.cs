@@ -14,6 +14,10 @@ public class ShipController : MonoBehaviour
     private float rollInput;
     public float rollSpeed = 90f, rollAcceleration = 3.5f;
 
+    public bool contact = false;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +28,9 @@ public class ShipController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if ( contact == true) {
         lookInput.x = Input.mousePosition.x;
         lookInput.y = Input.mousePosition.y;
 
@@ -46,5 +50,13 @@ public class ShipController : MonoBehaviour
         transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
         transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
         transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
+    
     }
+    }
+
+    private void OnColissionEnter(Collision collision) {
+           if(collision.gameObject.tag == "Char") {
+              contact = true;
+           }
+        }
 }
