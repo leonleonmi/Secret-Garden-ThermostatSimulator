@@ -55,8 +55,10 @@ public class ShipController : MonoBehaviour
     }
 
     private void OnColissionEnter(Collision collision) {
-           if(collision.gameObject.tag == "Char") {
-              contact = true;
+           if(collision.gameObject.name == "PlayerNew") {
+              Debug.Log("Collision!!!");
            }
         }
+
+    
 }

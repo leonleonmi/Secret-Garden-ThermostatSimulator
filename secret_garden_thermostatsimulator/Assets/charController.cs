@@ -34,14 +34,14 @@ public class charController : MonoBehaviour
 
     private void OnCollisionStay(Collision collision) {
            if(collision.gameObject.tag == "Ground") {
+               Debug.Log("Boden Collision!");
                onGround = true;
            }
 }
 
-    /*private void OnColissionEnter(Collision collision) {
+    private void OnColissionStay(Collision collision) {
            if(collision.gameObject.name == "StarSparrow12") {
-               shipCollison = true;
-               Debug.Log("Ship entered");
+               Debug.Log("Collision (Char)");
            }
-        }*/
+        }
 }
