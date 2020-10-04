@@ -9,15 +9,24 @@ public class charController : MonoBehaviour
     public Rigidbody rb;
 
     public bool onGround = true;
-    public bool shipCollison = true;
+    public bool controls = true;
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
     }
 
+    public GameObject PlayerCam;
+    public GameObject ShipCam;
+
     // Update is called once per frame
+
+    void start() {
+        PlayerCam.SetActive(true);
+        ShipCam.SetActive(false);
+    }
     void Update()
     {
+        if (controls == true) {
         float horizontalMovement = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         float verticalMovement = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
@@ -28,7 +37,7 @@ public class charController : MonoBehaviour
             rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
             onGround = false;
         } 
-       
+        }
        
     }
 
@@ -37,11 +46,31 @@ public class charController : MonoBehaviour
                Debug.Log("Boden Collision!");
                onGround = true;
            }
+
+           if(collision.gameObject.name == "StarSparrow12") {
+               Debug.Log("Collision Ship");
+               controls = false;
+               PlayerCam.SetActive(false);
+               ShipCam.SetActive(true);
+
+           }
+
+           if(collision.gameObject.tag == "Enviroment") {
+                Debug.Log("Enviroment Collision!");
+                
+            }
 }
+
+    /*private void OnCollisionStay(Collision collision) {
+            if(collision.gameObject.tag == "Enviroment") {
+                Debug.Log("Enviroment Collision!");
+                
+            }
+    }
 
     private void OnColissionStay(Collision collision) {
            if(collision.gameObject.name == "StarSparrow12") {
-               Debug.Log("Collision (Char)");
+               Debug.Log("Collision Ship");
            }
-        }
+        }*/
 }

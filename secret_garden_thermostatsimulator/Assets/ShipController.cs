@@ -16,6 +16,9 @@ public class ShipController : MonoBehaviour
 
     public bool contact = false;
 
+    public GameObject ShipCam;
+    public GameObject PlayerOne;
+
     
 
     // Start is called before the first frame update
@@ -30,7 +33,8 @@ public class ShipController : MonoBehaviour
 
     void Update()
     {
-        if ( contact == true) {
+        if ( ShipCam.active == true) {
+        PlayerOne.SetActive(false);
         lookInput.x = Input.mousePosition.x;
         lookInput.y = Input.mousePosition.y;
 
@@ -54,11 +58,13 @@ public class ShipController : MonoBehaviour
     }
     }
 
-    private void OnColissionEnter(Collision collision) {
-           if(collision.gameObject.name == "PlayerNew") {
-              Debug.Log("Collision!!!");
+    /*private void OnColissionEnter(Collision collision) {
+           if(collision.gameObject.name == "LandingArea") {
+              Debug.Log("Landed!");
+              //PlayerOne.SetActive(true);
+              
            }
-        }
+        }*/
 
     
 }
