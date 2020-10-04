@@ -26,7 +26,7 @@ public class charController : MonoBehaviour
     }
     void Update()
     {
-        if (controls == true) {
+        if (/*controls == true*/ gameObject.active) {
         float horizontalMovement = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         float verticalMovement = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 

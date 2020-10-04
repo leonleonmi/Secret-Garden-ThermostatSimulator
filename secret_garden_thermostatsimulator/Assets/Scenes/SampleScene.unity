@@ -30236,9 +30236,10 @@ GameObject:
   - component: {fileID: 1456676529}
   - component: {fileID: 1456676528}
   - component: {fileID: 1456676527}
+  - component: {fileID: 1456676531}
   m_Layer: 0
   m_Name: LandingArea
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30254,8 +30255,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 13.93, z: 1}
+  m_Center: {x: 0, y: 7, z: 0}
 --- !u!23 &1456676528
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30311,12 +30312,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456676526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.89, y: 20.5, z: -20.54}
+  m_LocalPosition: {x: 11.28, y: 20.68, z: -20.54}
   m_LocalScale: {x: 15, y: 0.5, z: 15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1456676531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456676526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0222f4f3413cd41deaae2eabfd72b920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCam: {fileID: 146563820}
+  ShipCam: {fileID: 495771230}
+  Player: {fileID: 1588348938}
+  Ship: {fileID: 1134011687}
 --- !u!1001 &1459345172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33437,7 +33454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588348938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 119.1, y: 21.76, z: -157.4}
+  m_LocalPosition: {x: 142.5, y: 21.76, z: -182.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1028418123}
