@@ -9,6 +9,7 @@ public class LandingAreaCollider : MonoBehaviour
     public GameObject ShipCam;
     public GameObject Player;
     public GameObject Ship;
+    public GameObject Sauce;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class LandingAreaCollider : MonoBehaviour
     }
 
     private void OnCollisionStay(Collision collision) {
-           if(collision.gameObject.name == "StarSparrow12") {
+           if(collision.gameObject.name == "StarSparrow12" && Sauce.activeSelf == false) {
                Debug.Log("Landed!");
                Player.SetActive(true);
                Player.transform.position = new Vector3(11, 23, -21);
