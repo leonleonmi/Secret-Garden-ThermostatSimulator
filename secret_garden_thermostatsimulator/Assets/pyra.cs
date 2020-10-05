@@ -117,7 +117,7 @@ public class pyra : MonoBehaviour
 	//In dieser Funktion wird ein Haus erstellt. Dazu werden die Vektorpunkte in einer createFace Funktion verbunden, um die jeweiligen Seiten des Hauses zu bilden
 	void createHouse(Vector3 position)
     {
-		float hoehe = Random.Range(4.0f, 14.0f);   //Der Y-Wert des Daches variiert von 3-9, damit die Haeuser unterschiedliche Hoehen haben
+		float hoehe = Random.Range(3.0f, 7.0f);   //Der Y-Wert des Daches variiert von 3-9, damit die Haeuser unterschiedliche Hoehen haben
 		Vector3 a = new Vector3(10, 0, 10) + position;
 		Vector3 b = new Vector3(-10, 0, 10) + position;
 		Vector3 c = new Vector3(-10, 0, -10) + position;
@@ -146,7 +146,7 @@ public class pyra : MonoBehaviour
 
     void createHouse1(Vector3 position)
     {
-		float hoehe = Random.Range(10.0f, 25.0f);   //Der Y-Wert des Daches variiert von 3-9, damit die Haeuser unterschiedliche Hoehen haben
+		float hoehe = Random.Range(5.0f, 10.0f);   //Der Y-Wert des Daches variiert von 3-9, damit die Haeuser unterschiedliche Hoehen haben
 		Vector3 a = new Vector3(6, 0, 6) + position;
 		Vector3 b = new Vector3(-6, 0, 6) + position;
 		Vector3 c = new Vector3(-6, 0, -6) + position;
