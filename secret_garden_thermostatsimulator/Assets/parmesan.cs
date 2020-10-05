@@ -12,6 +12,8 @@ public class parmesan : MonoBehaviour
         parm.SetActive(false);
     }
 
+
+
     private void OnCollisionStay(Collision collision) {
            if(collision.gameObject.name == "PlayerOne") {
                Debug.Log("Parmesan collected!");
