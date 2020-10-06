@@ -8,7 +8,7 @@ using UnityEngine;
 public class BoatController : MonoBehaviour
 {
   
-   //public Vector3 startPos;
+    public Vector3 startPos;
     public Vector3 newPos;
 
     //public float speed;
@@ -25,9 +25,9 @@ public class BoatController : MonoBehaviour
     {
        
         
-        /*startPos = transform.position;
+        startPos = transform.position;
         newPos = startPos;
-
+        /*
         void Awake()
         {
             ParticleSystem = GetComponentInChildren<ParticleSystem>();
@@ -42,11 +42,10 @@ public class BoatController : MonoBehaviour
     void Update()
     {
 
-        if (BoatCam.activeSelf == true) {
+        if (BoatCam.active == true) {
             player.SetActive(false);
         
 
-        // Moving the boat: A left, S right, W up, Y down
         if (Input.GetKeyDown(KeyCode.A))
         {
             newPos.x = newPos.x + 5;
@@ -60,11 +59,12 @@ public class BoatController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             newPos.z = newPos.z - 5;
+            Debug.Log("vorne");
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            newPos.x = newPos.x + 5;
+            newPos.x = newPos.x - 5;
         }
 
         transform.position = newPos;

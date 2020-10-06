@@ -59,10 +59,11 @@ public class charController : MonoBehaviour
 
            }
 
-           if(collision.gameObject.name == "WoodBoat") {
+           if(collision.gameObject.name == "Boot") {
                Debug.Log("Collision Boat");
-               PlayerCam.SetActive(false);
                BoatCam.SetActive(true);
+               PlayerCam.SetActive(false);
+               
                
 
            }

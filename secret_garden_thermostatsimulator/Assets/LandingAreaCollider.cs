@@ -20,12 +20,10 @@ public class LandingAreaCollider : MonoBehaviour
            if(collision.gameObject.name == "StarSparrow12" && Sauce.activeSelf == false) {
                Debug.Log("Landed!");
                Player.SetActive(true);
-               Player.transform.position = new Vector3(11, 23, -21);
+               Player.transform.position = new Vector3(155, 22, -141);
                ShipCam.SetActive(false);
                Ship.SetActive(false);
                PlayerCam.SetActive(true);
-
-
            }
 }
 }
