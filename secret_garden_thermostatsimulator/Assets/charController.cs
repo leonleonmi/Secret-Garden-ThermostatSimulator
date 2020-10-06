@@ -10,6 +10,7 @@ public class charController : MonoBehaviour
 
     public bool onGround = true;
     public bool controls = true;
+    
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
@@ -17,12 +18,15 @@ public class charController : MonoBehaviour
 
     public GameObject PlayerCam;
     public GameObject ShipCam;
+    public GameObject BoatCam;
+    //public GameObject player;
+
 
     // Update is called once per frame
 
     void start() {
         PlayerCam.SetActive(true);
-        ShipCam.SetActive(false);
+        
     }
     void Update()
     {
@@ -55,11 +59,13 @@ public class charController : MonoBehaviour
 
            }
 
-           if(collision.gameObject.tag == "Enviroment") {
-                Debug.Log("Enviroment Collision!");
-                
-            }
-}
+           if(collision.gameObject.name == "WoodBoat") {
+               Debug.Log("Collision Boat");
+               PlayerCam.SetActive(false);
+               BoatCam.SetActive(true);
+               
+
+           }
 
     /*private void OnCollisionStay(Collision collision) {
             if(collision.gameObject.tag == "Enviroment") {
@@ -73,4 +79,5 @@ public class charController : MonoBehaviour
                Debug.Log("Collision Ship");
            }
         }*/
+}
 }
