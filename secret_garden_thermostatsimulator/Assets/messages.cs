@@ -10,6 +10,8 @@ public class messages : MonoBehaviour
     public GameObject pasta;
     public GameObject herbs;
     public GameObject parm;
+
+    public GameObject trigger;
     
     void start() {
         sauce.SetActive(true);
@@ -29,8 +31,11 @@ public class messages : MonoBehaviour
         if (parm.activeSelf == true) {
         GUI.Label(new Rect(20, 20, 200, 200), "3. Überwinde die Berge und finde den Parmesan im magischen Wald!"); 
         }
-        if (sauce.activeSelf == false && pasta.activeSelf == false && herbs.activeSelf == false && parm.activeSelf == false) {
-        GUI.Label(new Rect(20, 20, 200, 200), "4. Bring die Zutaten zur Hütte im magischen Wald!");
+        if (sauce.activeSelf == false && pasta.activeSelf == false && herbs.activeSelf == false && parm.activeSelf == false && trigger.activeSelf == false) {
+        GUI.Label(new Rect(20, 20, 200, 200), "4. Nutze das Boot und bringe die Zutaten zur Hütte des Restaurants!");
+        }
+        if (sauce.activeSelf == false && pasta.activeSelf == false && herbs.activeSelf == false && parm.activeSelf == false && trigger.activeSelf == true) {
+        GUI.Label(new Rect(20, 20, 200, 200), "Du hast erfolgreich alle Zutaten abgeliefert!");
         }
     }
     

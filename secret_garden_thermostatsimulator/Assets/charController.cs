@@ -10,10 +10,19 @@ public class charController : MonoBehaviour
 
     public bool onGround = true;
     public bool controls = true;
+
+    
+
+    AudioSource jump;
+    //AudioSource car;
+
+   
     
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
+        jump = GetComponent<AudioSource>();
+        //car = GetComponent<AudioSource>();
     }
 
     public GameObject PlayerCam;
@@ -27,6 +36,7 @@ public class charController : MonoBehaviour
     void start() {
         PlayerCam.SetActive(true);
         
+        
     }
     void Update()
     {
@@ -38,6 +48,8 @@ public class charController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && onGround == true)
         {
+            jump.Play();
+            //GetComponent<AudioSource>().Play();
             rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
             onGround = false;
         } 
@@ -53,6 +65,7 @@ public class charController : MonoBehaviour
 
            if(collision.gameObject.name == "StarSparrow12") {
                Debug.Log("Collision Ship");
+               //car.Play();
                controls = false;
                PlayerCam.SetActive(false);
                ShipCam.SetActive(true);

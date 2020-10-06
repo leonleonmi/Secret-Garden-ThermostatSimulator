@@ -20,7 +20,7 @@ public class IslandCollider : MonoBehaviour
         if(collision.gameObject.name == "Boot"); {
                Debug.Log("Island Entered!");
                Player.SetActive(true);
-               Player.transform.position = new Vector3(11, 23, -21);
+               Player.transform.position = new Vector3(155, 22, -144);
                BoatCam.SetActive(false);
                Boat.SetActive(false);
                PlayerCam.SetActive(true);
