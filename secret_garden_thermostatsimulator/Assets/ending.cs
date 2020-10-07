@@ -8,6 +8,7 @@ public class ending : MonoBehaviour
     public GameObject trigger;
     public GameObject sauce;
     public GameObject player;
+    public GameObject endCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class ending : MonoBehaviour
         if (collision.gameObject.name == "PlayerOne" && sauce.active == false) {
             trigger.SetActive(true);
             player.SetActive(false);
+            endCam.SetActive(true);
         }
     }
 }

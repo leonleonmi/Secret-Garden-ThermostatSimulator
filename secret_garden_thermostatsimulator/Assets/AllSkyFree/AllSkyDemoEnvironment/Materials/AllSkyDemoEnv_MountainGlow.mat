@@ -31,4 +31,4 @@ Material:
     - _Emission: 1
     - _EmissionLM: 0
     m_Colors:
-    - _Color: {r: 0.99264705, g: 0.42565024, b: 0.058391, a: 1}
+    - _Color: {r: 0.5471698, g: 0.48609483, b: 0.29165182, a: 1}
