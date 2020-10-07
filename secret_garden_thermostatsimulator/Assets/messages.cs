@@ -16,6 +16,7 @@ public class messages : MonoBehaviour
     void start() {
         sauce.SetActive(true);
         
+        
     }
 
     void OnGUI() {
